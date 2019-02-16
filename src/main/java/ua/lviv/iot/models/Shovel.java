@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab_3.models;
+package ua.lviv.iot.models;
 
 public class Shovel extends GardenTool {
     private double handleLength;
