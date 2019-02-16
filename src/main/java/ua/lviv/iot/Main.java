@@ -1,8 +1,8 @@
-package ua.lviv.iot.lab_3.tests;
+package ua.lviv.iot;
 
-import ua.lviv.iot.lab_3.managers.GardenToolManager;
-import ua.lviv.iot.lab_3.managers.GardenToolManagerImpl;
-import ua.lviv.iot.lab_3.models.*;
+import ua.lviv.iot.managers.GardenToolManager;
+import ua.lviv.iot.managers.GardenToolManagerImpl;
+import ua.lviv.iot.models.*;
 
 import java.util.ArrayList;
 import java.util.List;
