@@ -2,13 +2,18 @@ package ua.lviv.iot;
 
 import ua.lviv.iot.managers.GardenToolManager;
 import ua.lviv.iot.managers.GardenToolManagerImpl;
-import ua.lviv.iot.models.*;
+import ua.lviv.iot.models.GardenTool;
+import ua.lviv.iot.models.Saw;
+import ua.lviv.iot.models.Shovel;
+import ua.lviv.iot.models.Averruncator;
+import ua.lviv.iot.models.Axe;
+import ua.lviv.iot.models.Purpose;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
-    public static void main(String[] args) {
+public final class Main {
+    public static void main(final String[] args) {
         GardenTool saw = new Saw();
         GardenTool shovel = new Shovel();
         GardenTool averruncator = new Averruncator();
@@ -36,7 +41,8 @@ public class Main {
         gardenTools.add(axe);
 
         GardenToolManager manager = new GardenToolManagerImpl(gardenTools);
-        List<GardenTool> forWood = manager.findToolsByPurpose(Purpose.WOOD_N_BRANCHES);
+        List<GardenTool> forWood =
+                manager.findToolsByPurpose(Purpose.WOOD_N_BRANCHES);
         forWood.forEach((GardenTool tool) -> {
             System.out.println(tool.getPurpose().toString());
         });
@@ -52,6 +58,8 @@ public class Main {
         sortedByWeight.forEach((GardenTool tool) -> {
             System.out.println(tool.getWeight());
         });
+    }
 
+    private Main() {
     }
 }

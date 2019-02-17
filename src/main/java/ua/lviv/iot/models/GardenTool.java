@@ -9,8 +9,10 @@ public abstract class GardenTool {
     private int yearsOfWarranty;
     private Purpose purpose;
 
-    public GardenTool(double weight, double price, String countryOfOrigin, String manufacturer,
-                      String material, int yearsOfWarranty, Purpose purpose) {
+    public GardenTool(final double weight, final double price,
+                      final String countryOfOrigin, final String manufacturer,
+                      final String material, final int yearsOfWarranty,
+                      final Purpose purpose) {
         this.weight = weight;
         this.price = price;
         this.countryOfOrigin = countryOfOrigin;
@@ -27,7 +29,7 @@ public abstract class GardenTool {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(final double weight) {
         this.weight = weight;
     }
 
@@ -35,7 +37,7 @@ public abstract class GardenTool {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(final double price) {
         this.price = price;
     }
 
@@ -43,7 +45,7 @@ public abstract class GardenTool {
         return countryOfOrigin;
     }
 
-    public void setCountryOfOrigin(String countryOfOrigin) {
+    public void setCountryOfOrigin(final String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
     }
 
@@ -51,7 +53,7 @@ public abstract class GardenTool {
         return manufacturer;
     }
 
-    public void setManufacturer(String manufacturer) {
+    public void setManufacturer(final String manufacturer) {
         this.manufacturer = manufacturer;
     }
 
@@ -59,7 +61,7 @@ public abstract class GardenTool {
         return material;
     }
 
-    public void setMaterial(String material) {
+    public void setMaterial(final String material) {
         this.material = material;
     }
 
@@ -67,7 +69,7 @@ public abstract class GardenTool {
         return yearsOfWarranty;
     }
 
-    public void setYearsOfWarranty(int yearsOfWarranty) {
+    public void setYearsOfWarranty(final int yearsOfWarranty) {
         this.yearsOfWarranty = yearsOfWarranty;
     }
 
@@ -75,7 +77,7 @@ public abstract class GardenTool {
         return purpose;
     }
 
-    public void setPurpose(Purpose purpose) {
+    public void setPurpose(final Purpose purpose) {
         this.purpose = purpose;
     }
 }

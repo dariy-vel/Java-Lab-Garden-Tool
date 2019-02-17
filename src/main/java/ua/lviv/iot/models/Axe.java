@@ -3,11 +3,15 @@ package ua.lviv.iot.models;
 public class Axe extends GardenTool {
     private double bladeWidth;
 
-    public Axe(double weight, double price, String countryOfOrigin, String manufacturer,
-               String material, int yearsOfWarranty, Purpose purpose, double bladeWidth) {
-        super(weight, price, countryOfOrigin, manufacturer, material, yearsOfWarranty, purpose);
+    public Axe(final double weight, final double price,
+               final String countryOfOrigin, final String manufacturer,
+               final String material, final int yearsOfWarranty,
+               final Purpose purpose, final double bladeWidth) {
+        super(weight, price, countryOfOrigin, manufacturer,
+                material, yearsOfWarranty, purpose);
         this.bladeWidth = bladeWidth;
     }
+
 
     public Axe() {
     }
@@ -16,7 +20,7 @@ public class Axe extends GardenTool {
         return bladeWidth;
     }
 
-    public void setBladeWidth(double bladeWidth) {
+    public void setBladeWidth(final double bladeWidth) {
         this.bladeWidth = bladeWidth;
     }
 }

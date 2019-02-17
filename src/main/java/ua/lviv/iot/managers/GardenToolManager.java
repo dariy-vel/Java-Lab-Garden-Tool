@@ -6,9 +6,9 @@ import ua.lviv.iot.models.Purpose;
 import java.util.List;
 
 public interface GardenToolManager {
-    public List<GardenTool> findToolsByPurpose(Purpose purpose);
+    List<GardenTool> findToolsByPurpose(Purpose purpose);
 
-    public List<GardenTool> sortToolsByPrice(boolean reverse);
+    List<GardenTool> sortToolsByPrice(boolean reverse);
 
-    public List<GardenTool> sortToolsByWeight(boolean reverse);
+    List<GardenTool> sortToolsByWeight(boolean reverse);
 }

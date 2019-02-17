@@ -4,9 +4,13 @@ public class Averruncator extends GardenTool {
     private Hand hand;
     private double cutOffDiameter;
 
-    public Averruncator(double weight, double price, String countryOfOrigin, String manufacturer,
-                        String material, int yearsOfWarranty, Purpose purpose, Hand hand, double cutOffDiameter) {
-        super(weight, price, countryOfOrigin, manufacturer, material, yearsOfWarranty, purpose);
+    public Averruncator(final double weight, final double price,
+                        final String countryOfOrigin, final String manufacturer,
+                        final String material, final int yearsOfWarranty,
+                        final Purpose purpose, final Hand hand,
+                        final double cutOffDiameter) {
+        super(weight, price, countryOfOrigin, manufacturer,
+                material, yearsOfWarranty, purpose);
         this.hand = hand;
         this.cutOffDiameter = cutOffDiameter;
     }
@@ -18,7 +22,7 @@ public class Averruncator extends GardenTool {
         return hand;
     }
 
-    public void setHand(Hand hand) {
+    public void setHand(final Hand hand) {
         this.hand = hand;
     }
 
@@ -26,7 +30,7 @@ public class Averruncator extends GardenTool {
         return cutOffDiameter;
     }
 
-    public void setCutOffDiameter(double cutOffDiameter) {
+    public void setCutOffDiameter(final double cutOffDiameter) {
         this.cutOffDiameter = cutOffDiameter;
     }
 }
