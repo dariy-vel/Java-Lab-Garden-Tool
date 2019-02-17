@@ -5,9 +5,13 @@ public class Saw extends GardenTool {
     private double bladeLength;
     private DriveType driveType;
 
-    public Saw(double weight, double price, String countryOfOrigin, String manufacturer,
-               String material, int yearsOfWarranty, Purpose purpose, double bladeLength, DriveType driveType) {
-        super(weight, price, countryOfOrigin, manufacturer, material, yearsOfWarranty, purpose);
+    public Saw(final double weight, final double price,
+               final String countryOfOrigin, final String manufacturer,
+               final String material, final int yearsOfWarranty,
+               final Purpose purpose, final double bladeLength,
+               final DriveType driveType) {
+        super(weight, price, countryOfOrigin, manufacturer,
+                material, yearsOfWarranty, purpose);
         this.bladeLength = bladeLength;
         this.driveType = driveType;
     }
@@ -19,7 +23,7 @@ public class Saw extends GardenTool {
         return bladeLength;
     }
 
-    public void setBladeLength(double bladeLength) {
+    public void setBladeLength(final double bladeLength) {
         this.bladeLength = bladeLength;
     }
 
@@ -27,7 +31,7 @@ public class Saw extends GardenTool {
         return driveType;
     }
 
-    public void setDriveType(DriveType driveType) {
+    public void setDriveType(final DriveType driveType) {
         this.driveType = driveType;
     }
 }

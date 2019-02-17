@@ -3,9 +3,12 @@ package ua.lviv.iot.models;
 public class Shovel extends GardenTool {
     private double handleLength;
 
-    public Shovel(double weight, double price, String countryOfOrigin, String manufacturer,
-                  String material, int yearsOfWarranty, Purpose purpose, double handleLength) {
-        super(weight, price, countryOfOrigin, manufacturer, material, yearsOfWarranty, purpose);
+    public Shovel(final double weight, final double price,
+                  final String countryOfOrigin, final String manufacturer,
+                  final String material, final int yearsOfWarranty,
+                  final Purpose purpose, final double handleLength) {
+        super(weight, price, countryOfOrigin, manufacturer,
+                material, yearsOfWarranty, purpose);
         this.handleLength = handleLength;
     }
 
@@ -16,7 +19,7 @@ public class Shovel extends GardenTool {
         return handleLength;
     }
 
-    public void setHandleLength(double handleLength) {
+    public void setHandleLength(final double handleLength) {
         this.handleLength = handleLength;
     }
 }
