@@ -75,6 +75,7 @@
                 <configuration>
                     <configLocation>./src/main/resources/checkstyle/checkstyle.xml</configLocation>
                     <consoleOutput>true</consoleOutput>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
                 </configuration>
             </plugin>
             <plugin>
