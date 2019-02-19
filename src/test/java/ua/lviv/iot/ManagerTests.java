@@ -3,13 +3,21 @@ package ua.lviv.iot;
 import org.junit.jupiter.api.Test;
 import ua.lviv.iot.managers.GardenToolManager;
 import ua.lviv.iot.managers.GardenToolManagerImpl;
-import ua.lviv.iot.models.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import ua.lviv.iot.models.Purpose;
+import ua.lviv.iot.models.Hand;
+import ua.lviv.iot.models.Axe;
+import ua.lviv.iot.models.GardenTool;
+import ua.lviv.iot.models.Averruncator;
+import ua.lviv.iot.models.Saw;
+import ua.lviv.iot.models.DriveType;
+import ua.lviv.iot.models.Shovel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ManagerTests {
     private GardenTool object1 = new Saw(
@@ -74,7 +82,8 @@ public class ManagerTests {
             if (i == 0) {
                 continue;
             }
-            assertTrue(actual.get(i - 1).getPrice() < actual.get(i).getPrice(), "Sorting by price doesn't work");
+            assertTrue(actual.get(i - 1).getPrice() < actual.get(i).getPrice(),
+                    "Sorting by price doesn't work");
         }
     }
 
@@ -86,7 +95,8 @@ public class ManagerTests {
             if (i == 0) {
                 continue;
             }
-            assertTrue(actual.get(i - 1).getPrice() > actual.get(i).getPrice(), "Sorting by price doesn't work");
+            assertTrue(actual.get(i - 1).getPrice() > actual.get(i).getPrice(),
+                    "Sorting by price doesn't work");
         }
     }
 
@@ -98,7 +108,8 @@ public class ManagerTests {
             if (i == 0) {
                 continue;
             }
-            assertTrue(actual.get(i - 1).getWeight() < actual.get(i).getWeight(), "Sorting by weight doesn't work");
+            assertTrue(actual.get(i - 1).getWeight() < actual.get(i).getWeight(),
+                    "Sorting by weight doesn't work");
         }
     }
 
@@ -110,16 +121,19 @@ public class ManagerTests {
             if (i == 0) {
                 continue;
             }
-            assertTrue(actual.get(i - 1).getPrice() > actual.get(i).getPrice(), "Sorting by weight doesn't work");
+            assertTrue(actual.get(i - 1).getPrice() > actual.get(i).getPrice(),
+                    "Sorting by weight doesn't work");
         }
     }
 
     @Test
     void testSearchByPurpose() {
-        List<GardenTool> actual = this.manager.findToolsByPurpose(Purpose.WOOD_N_BRANCHES);
+        List<GardenTool> actual = this.manager
+                .findToolsByPurpose(Purpose.WOOD_N_BRANCHES);
 
         for (GardenTool gardenTool : actual) {
-            assertEquals(Purpose.WOOD_N_BRANCHES, gardenTool.getPurpose(), "Searching by purpose doesn't work");
+            assertEquals(Purpose.WOOD_N_BRANCHES, gardenTool.getPurpose(),
+                    "Searching by purpose doesn't work");
         }
     }
 }
