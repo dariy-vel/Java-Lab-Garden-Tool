@@ -3,11 +3,10 @@ package ua.lviv.iot.managers;
 import ua.lviv.iot.models.GardenTool;
 import ua.lviv.iot.models.Purpose;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class GardenToolManagerImpl implements GardenToolManager, Serializable {
+public class GardenToolManagerImpl implements GardenToolManager {
     private List<GardenTool> gardenTools;
 
     public GardenToolManagerImpl(final List<GardenTool> gardenTools) {
