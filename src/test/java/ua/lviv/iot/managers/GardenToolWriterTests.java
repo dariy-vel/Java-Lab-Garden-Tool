@@ -75,9 +75,8 @@ public class GardenToolWriterTests {
     @Test
     void testOutputToFile() throws IOException {
         final String fileName = "output";
-        List<GardenTool> input = this.manager.sortToolsByPrice(false);
         GardenToolWriter writer = new GardenToolWriter(fileName);
-        writer.writeToFile(input);
+        writer.writeToFile(this.input);
 
         File testFile = new File("./target/" + fileName + ".csv");
         assertTrue(testFile.exists() && testFile.isFile(), "File wasn't created");
