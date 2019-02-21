@@ -4,11 +4,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ua.lviv.iot.models.*;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GardenToolWriterTests {
@@ -80,5 +80,19 @@ public class GardenToolWriterTests {
 
         File testFile = new File("./target/" + fileName + ".csv");
         assertTrue(testFile.exists() && testFile.isFile(), "File wasn't created");
+
+        try (FileInputStream fis = new FileInputStream(testFile);
+             InputStreamReader isr = new InputStreamReader(fis);
+             BufferedReader bufReader = new BufferedReader(isr)) {
+
+            assertEquals("sep = ,", bufReader.readLine());
+            for (GardenTool gardenTool : input) {
+                assertEquals(gardenTool.getHeaders(), bufReader.readLine());
+                assertEquals(gardenTool.toCSV(), bufReader.readLine());
+            }
+            assertEquals(null, bufReader.readLine());
+
+        } finally {
+        }
     }
 }
