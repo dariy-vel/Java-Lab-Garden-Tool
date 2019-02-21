@@ -2,9 +2,22 @@ package ua.lviv.iot.managers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ua.lviv.iot.models.*;
 
-import java.io.*;
+import ua.lviv.iot.models.Averruncator;
+import ua.lviv.iot.models.GardenTool;
+import ua.lviv.iot.models.Saw;
+import ua.lviv.iot.models.Purpose;
+import ua.lviv.iot.models.Hand;
+import ua.lviv.iot.models.Axe;
+import ua.lviv.iot.models.Shovel;
+import ua.lviv.iot.models.DriveType;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,7 +91,8 @@ public class GardenToolWriterTests {
         writer.writeToFile(this.input);
 
         File testFile = new File("./target/" + fileName + ".csv");
-        assertTrue(testFile.exists() && testFile.isFile(), "File wasn't created");
+        assertTrue(testFile.exists() && testFile.isFile(),
+                "File wasn't created");
 
         try (FileInputStream fis = new FileInputStream(testFile);
              InputStreamReader isr = new InputStreamReader(fis);
@@ -91,7 +105,6 @@ public class GardenToolWriterTests {
             }
             assertEquals(null, bufReader.readLine());
 
-        } finally {
         }
     }
 }

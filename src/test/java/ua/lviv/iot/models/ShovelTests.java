@@ -30,27 +30,27 @@ public class ShovelTests {
 
     @Test
     void testGetHeaders() {
-        assertEquals("weight" +
-                        ", price" +
-                        ", countryOfOrigin" +
-                        ", manufacturer" +
-                        ", material" +
-                        ", yearsOfWarranty" +
-                        ", purpose" +
-                        ", handleLength",
+        assertEquals("weight"
+                        + ", price"
+                        + ", countryOfOrigin"
+                        + ", manufacturer"
+                        + ", material"
+                        + ", yearsOfWarranty"
+                        + ", purpose"
+                        + ", handleLength",
                 shovel.getHeaders());
     }
 
     @Test
     void testToCSV() {
-        assertEquals(shovel.getWeight() +
-                        ", " + shovel.getPrice() +
-                        ", " + shovel.getCountryOfOrigin() +
-                        ", " + shovel.getManufacturer() +
-                        ", " + shovel.getMaterial() +
-                        ", " + shovel.getYearsOfWarranty() +
-                        ", " + shovel.getPurpose() +
-                        ", " + shovel.getHandleLength(),
+        assertEquals(shovel.getWeight()
+                        + ", " + shovel.getPrice()
+                        + ", " + shovel.getCountryOfOrigin()
+                        + ", " + shovel.getManufacturer()
+                        + ", " + shovel.getMaterial()
+                        + ", " + shovel.getYearsOfWarranty()
+                        + ", " + shovel.getPurpose()
+                        + ", " + shovel.getHandleLength(),
                 shovel.toCSV());
     }
 }

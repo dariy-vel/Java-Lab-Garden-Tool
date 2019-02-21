@@ -32,29 +32,29 @@ public class AverruncatorTests {
 
     @Test
     void testGetHeaders() {
-        assertEquals("weight" +
-                        ", price" +
-                        ", countryOfOrigin" +
-                        ", manufacturer" +
-                        ", material" +
-                        ", yearsOfWarranty" +
-                        ", purpose" +
-                        ", hand" +
-                        ", cutOffDiameter",
+        assertEquals("weight"
+                        + ", price"
+                        + ", countryOfOrigin"
+                        + ", manufacturer"
+                        + ", material"
+                        + ", yearsOfWarranty"
+                        + ", purpose"
+                        + ", hand"
+                        + ", cutOffDiameter",
                 averruncator.getHeaders());
     }
 
     @Test
     void testToCSV() {
-        assertEquals(averruncator.getWeight() +
-                        ", " + averruncator.getPrice() +
-                        ", " + averruncator.getCountryOfOrigin() +
-                        ", " + averruncator.getManufacturer() +
-                        ", " + averruncator.getMaterial() +
-                        ", " + averruncator.getYearsOfWarranty() +
-                        ", " + averruncator.getPurpose() +
-                        ", " + averruncator.getHand() +
-                        ", " + averruncator.getCutOffDiameter(),
+        assertEquals(averruncator.getWeight()
+                        + ", " + averruncator.getPrice()
+                        + ", " + averruncator.getCountryOfOrigin()
+                        + ", " + averruncator.getManufacturer()
+                        + ", " + averruncator.getMaterial()
+                        + ", " + averruncator.getYearsOfWarranty()
+                        + ", " + averruncator.getPurpose()
+                        + ", " + averruncator.getHand()
+                        + ", " + averruncator.getCutOffDiameter(),
                 averruncator.toCSV());
     }
 }

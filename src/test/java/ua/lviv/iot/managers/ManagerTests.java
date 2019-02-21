@@ -120,7 +120,8 @@ public class ManagerTests {
             if (i == 0) {
                 continue;
             }
-            assertTrue(actual.get(i - 1).getWeight() < actual.get(i).getWeight(),
+            assertTrue(actual.get(i - 1)
+                            .getWeight() < actual.get(i).getWeight(),
                     "Sorting by weight doesn't work");
         }
     }

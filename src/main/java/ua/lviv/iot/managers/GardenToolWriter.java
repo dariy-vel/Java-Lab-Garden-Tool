@@ -2,17 +2,23 @@ package ua.lviv.iot.managers;
 
 import ua.lviv.iot.models.GardenTool;
 
-import java.io.*;
+import java.io.File;
+import java.io.OutputStreamWriter;
+import java.io.FileOutputStream;
+import java.io.BufferedWriter;
+import java.io.IOException;
+
 import java.util.List;
 
 public class GardenToolWriter {
     private File outputFile;
 
-    public GardenToolWriter(String fileName) {
+    public GardenToolWriter(final String fileName) {
         outputFile = new File("./target/" + fileName + ".csv");
     }
 
-    public void writeToFile(List<GardenTool> gardenTools) throws IOException {
+    public void writeToFile(final List<GardenTool> gardenTools)
+            throws IOException {
         try (FileOutputStream fos = new FileOutputStream(this.outputFile);
              OutputStreamWriter osw = new OutputStreamWriter(fos);
              BufferedWriter bufWriter = new BufferedWriter(osw)) {
@@ -26,8 +32,6 @@ public class GardenToolWriter {
                 bufWriter.write(gardenTool.toCSV());
                 bufWriter.newLine();
             }
-        } finally {
-
         }
     }
 }

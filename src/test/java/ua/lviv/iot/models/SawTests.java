@@ -32,29 +32,29 @@ public class SawTests {
 
     @Test
     void testGetHeaders() {
-        assertEquals("weight" +
-                        ", price" +
-                        ", countryOfOrigin" +
-                        ", manufacturer" +
-                        ", material" +
-                        ", yearsOfWarranty" +
-                        ", purpose" +
-                        ", bladeLength" +
-                        ", driveType",
+        assertEquals("weight"
+                        + ", price"
+                        + ", countryOfOrigin"
+                        + ", manufacturer"
+                        + ", material"
+                        + ", yearsOfWarranty"
+                        + ", purpose"
+                        + ", bladeLength"
+                        + ", driveType",
                 saw.getHeaders());
     }
 
     @Test
     void testToCSV() {
-        assertEquals(saw.getWeight() +
-                        ", " + saw.getPrice() +
-                        ", " + saw.getCountryOfOrigin() +
-                        ", " + saw.getManufacturer() +
-                        ", " + saw.getMaterial() +
-                        ", " + saw.getYearsOfWarranty() +
-                        ", " + saw.getPurpose() +
-                        ", " + saw.getBladeLength() +
-                        ", " + saw.getDriveType(),
+        assertEquals(saw.getWeight()
+                        + ", " + saw.getPrice()
+                        + ", " + saw.getCountryOfOrigin()
+                        + ", " + saw.getManufacturer()
+                        + ", " + saw.getMaterial()
+                        + ", " + saw.getYearsOfWarranty()
+                        + ", " + saw.getPurpose()
+                        + ", " + saw.getBladeLength()
+                        + ", " + saw.getDriveType(),
                 saw.toCSV());
     }
 }

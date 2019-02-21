@@ -19,14 +19,14 @@ public class Averruncator extends GardenTool {
     }
 
     public String getHeaders() {
-        return super.getHeaders() + ", hand" +
-                ", cutOffDiameter";
+        return super.getHeaders() + ", hand"
+                + ", cutOffDiameter";
     }
 
     public String toCSV() {
-        return super.toCSV() +
-                ", " + hand +
-                ", " + cutOffDiameter;
+        return super.toCSV()
+                + ", " + hand
+                + ", " + cutOffDiameter;
     }
 
     public Hand getHand() {

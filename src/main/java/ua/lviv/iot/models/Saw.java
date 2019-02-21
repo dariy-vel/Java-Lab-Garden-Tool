@@ -20,14 +20,14 @@ public class Saw extends GardenTool {
     }
 
     public String getHeaders() {
-        return super.getHeaders() + ", bladeLength" +
-                ", driveType";
+        return super.getHeaders() + ", bladeLength"
+                + ", driveType";
     }
 
     public String toCSV() {
-        return super.toCSV() +
-                ", " + bladeLength +
-                ", " + driveType;
+        return super.toCSV()
+                + ", " + bladeLength
+                + ", " + driveType;
     }
 
     public double getBladeLength() {

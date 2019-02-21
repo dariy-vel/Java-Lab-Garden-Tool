@@ -26,23 +26,23 @@ public abstract class GardenTool {
     }
 
     public String getHeaders() {
-        return "weight" +
-                ", price" +
-                ", countryOfOrigin" +
-                ", manufacturer" +
-                ", material" +
-                ", yearsOfWarranty" +
-                ", purpose";
+        return "weight"
+                + ", price"
+                + ", countryOfOrigin"
+                + ", manufacturer"
+                + ", material"
+                + ", yearsOfWarranty"
+                + ", purpose";
     }
 
     public String toCSV() {
-        return weight +
-                ", " + price +
-                ", " + countryOfOrigin +
-                ", " + manufacturer +
-                ", " + material +
-                ", " + yearsOfWarranty +
-                ", " + purpose;
+        return weight
+                + ", " + price
+                + ", " + countryOfOrigin
+                + ", " + manufacturer
+                + ", " + material
+                + ", " + yearsOfWarranty
+                + ", " + purpose;
     }
 
     public double getWeight() {
