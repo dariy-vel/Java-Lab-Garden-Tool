@@ -1,10 +1,8 @@
-package ua.lviv.iot;
+package ua.lviv.iot.managers;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ua.lviv.iot.managers.GardenToolManager;
-import ua.lviv.iot.managers.GardenToolManagerImpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
