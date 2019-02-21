@@ -18,6 +18,11 @@ public class Averruncator extends GardenTool {
     public Averruncator() {
     }
 
+    public String getHeaders() {
+        return super.getHeaders() + ", hand" +
+                ", cutOffDiameter";
+    }
+
     public Hand getHand() {
         return hand;
     }

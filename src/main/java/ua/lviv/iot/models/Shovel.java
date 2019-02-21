@@ -15,6 +15,10 @@ public class Shovel extends GardenTool {
     public Shovel() {
     }
 
+    public String getHeaders() {
+        return super.getHeaders() + ", handleLength";
+    }
+
     public double getHandleLength() {
         return handleLength;
     }
