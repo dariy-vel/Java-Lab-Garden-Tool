@@ -40,4 +40,17 @@ public class ShovelTests {
                         ", handleLength",
                 shovel.getHeaders());
     }
+
+    @Test
+    void testToCSV() {
+        assertEquals(shovel.getWeight() +
+                        ", " + shovel.getPrice() +
+                        ", " + shovel.getCountryOfOrigin() +
+                        ", " + shovel.getManufacturer() +
+                        ", " + shovel.getMaterial() +
+                        ", " + shovel.getYearsOfWarranty() +
+                        ", " + shovel.getPurpose() +
+                        ", " + shovel.getHandleLength(),
+                shovel.toCSV());
+    }
 }

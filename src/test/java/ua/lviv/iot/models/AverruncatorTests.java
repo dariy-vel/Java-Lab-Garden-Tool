@@ -43,4 +43,18 @@ public class AverruncatorTests {
                         ", cutOffDiameter",
                 averruncator.getHeaders());
     }
+
+    @Test
+    void testToCSV() {
+        assertEquals(averruncator.getWeight() +
+                        ", " + averruncator.getPrice() +
+                        ", " + averruncator.getCountryOfOrigin() +
+                        ", " + averruncator.getManufacturer() +
+                        ", " + averruncator.getMaterial() +
+                        ", " + averruncator.getYearsOfWarranty() +
+                        ", " + averruncator.getPurpose() +
+                        ", " + averruncator.getHand() +
+                        ", " + averruncator.getCutOffDiameter(),
+                averruncator.toCSV());
+    }
 }

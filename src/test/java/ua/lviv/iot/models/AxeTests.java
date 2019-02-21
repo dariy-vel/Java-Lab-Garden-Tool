@@ -40,4 +40,17 @@ public class AxeTests {
                         ", bladeWidth",
                 axe.getHeaders());
     }
+
+    @Test
+    void testToCSV() {
+        assertEquals(axe.getWeight() +
+                        ", " + axe.getPrice() +
+                        ", " + axe.getCountryOfOrigin() +
+                        ", " + axe.getManufacturer() +
+                        ", " + axe.getMaterial() +
+                        ", " + axe.getYearsOfWarranty() +
+                        ", " + axe.getPurpose() +
+                        ", " + axe.getBladeWidth(),
+                axe.toCSV());
+    }
 }

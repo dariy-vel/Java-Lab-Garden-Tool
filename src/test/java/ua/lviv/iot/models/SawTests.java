@@ -43,4 +43,18 @@ public class SawTests {
                         ", driveType",
                 saw.getHeaders());
     }
+
+    @Test
+    void testToCSV() {
+        assertEquals(saw.getWeight() +
+                        ", " + saw.getPrice() +
+                        ", " + saw.getCountryOfOrigin() +
+                        ", " + saw.getManufacturer() +
+                        ", " + saw.getMaterial() +
+                        ", " + saw.getYearsOfWarranty() +
+                        ", " + saw.getPurpose() +
+                        ", " + saw.getBladeLength() +
+                        ", " + saw.getDriveType(),
+                saw.toCSV());
+    }
 }
