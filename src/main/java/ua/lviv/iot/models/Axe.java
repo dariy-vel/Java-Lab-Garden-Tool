@@ -19,6 +19,11 @@ public class Axe extends GardenTool {
         return super.getHeaders() + ", bladeWidth";
     }
 
+    public String toCSV() {
+        return super.toCSV() +
+                ", " + bladeWidth;
+    }
+
     public double getBladeWidth() {
         return bladeWidth;
     }

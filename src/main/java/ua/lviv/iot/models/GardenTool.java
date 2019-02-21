@@ -35,6 +35,16 @@ public abstract class GardenTool {
                 ", purpose";
     }
 
+    public String toCSV() {
+        return weight +
+                ", " + price +
+                ", " + countryOfOrigin +
+                ", " + manufacturer +
+                ", " + material +
+                ", " + yearsOfWarranty +
+                ", " + purpose;
+    }
+
     public double getWeight() {
         return weight;
     }

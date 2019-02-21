@@ -23,6 +23,12 @@ public class Averruncator extends GardenTool {
                 ", cutOffDiameter";
     }
 
+    public String toCSV() {
+        return super.toCSV() +
+                ", " + hand +
+                ", " + cutOffDiameter;
+    }
+
     public Hand getHand() {
         return hand;
     }
