@@ -69,7 +69,6 @@ public class GardenToolWriterTests {
         input.add(object2);
         input.add(object1);
         input.add(object4);
-        manager = new GardenToolManagerImpl(input);
     }
 
     @Test
