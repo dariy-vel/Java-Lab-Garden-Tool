@@ -21,8 +21,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class GardenToolWriterTests {
     private GardenTool object1;
@@ -85,7 +84,7 @@ public class GardenToolWriterTests {
     }
 
     @Test
-    void testOutputToFile() throws IOException {
+    void testOutputToFile() {
         final String fileName = "output";
         GardenToolWriter writer = new GardenToolWriter(fileName);
         writer.writeToFile(this.input);
@@ -103,8 +102,9 @@ public class GardenToolWriterTests {
                 assertEquals(gardenTool.getHeaders(), bufReader.readLine());
                 assertEquals(gardenTool.toCSV(), bufReader.readLine());
             }
-            assertEquals(null, bufReader.readLine());
-
+            assertNull(bufReader.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

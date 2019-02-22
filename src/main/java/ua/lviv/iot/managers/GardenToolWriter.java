@@ -17,8 +17,7 @@ public class GardenToolWriter {
         outputFile = new File("./target/" + fileName + ".csv");
     }
 
-    public void writeToFile(final List<GardenTool> gardenTools)
-            throws IOException {
+    public void writeToFile(final List<GardenTool> gardenTools) {
         try (FileOutputStream fos = new FileOutputStream(this.outputFile);
              OutputStreamWriter osw = new OutputStreamWriter(fos);
              BufferedWriter bufWriter = new BufferedWriter(osw)) {
@@ -32,6 +31,8 @@ public class GardenToolWriter {
                 bufWriter.write(gardenTool.toCSV());
                 bufWriter.newLine();
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
