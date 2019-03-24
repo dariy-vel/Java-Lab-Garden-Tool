@@ -1,5 +1,8 @@
-package ua.lviv.iot.models;
+package ua.lviv.iot.gardenTool.models;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Shovel extends GardenTool {
     private double handleLength;
 

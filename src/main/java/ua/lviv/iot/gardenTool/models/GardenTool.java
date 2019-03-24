@@ -1,6 +1,18 @@
-package ua.lviv.iot.models;
+package ua.lviv.iot.gardenTool.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+
+@Entity
+@Inheritance
 public abstract class GardenTool {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
     private double weight;
     private double price;
     private String countryOfOrigin;
@@ -99,5 +111,13 @@ public abstract class GardenTool {
 
     public void setPurpose(final Purpose purpose) {
         this.purpose = purpose;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(final Integer id) {
+        this.id = id;
     }
 }

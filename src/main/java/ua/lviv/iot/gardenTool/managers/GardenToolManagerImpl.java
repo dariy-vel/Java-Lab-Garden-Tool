@@ -1,7 +1,7 @@
-package ua.lviv.iot.managers;
+package ua.lviv.iot.gardenTool.managers;
 
-import ua.lviv.iot.models.GardenTool;
-import ua.lviv.iot.models.Purpose;
+import ua.lviv.iot.gardenTool.models.GardenTool;
+import ua.lviv.iot.gardenTool.models.Purpose;
 
 import java.util.List;
 import java.util.stream.Collectors;

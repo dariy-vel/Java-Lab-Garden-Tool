@@ -1,4 +1,5 @@
-package ua.lviv.iot.models;
+package ua.lviv.iot.gardenTool.models;
+
 
 public class Averruncator extends GardenTool {
     private Hand hand;

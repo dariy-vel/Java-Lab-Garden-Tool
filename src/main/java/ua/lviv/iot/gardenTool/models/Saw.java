@@ -1,7 +1,6 @@
-package ua.lviv.iot.models;
+package ua.lviv.iot.gardenTool.models;
 
 public class Saw extends GardenTool {
-
     private double bladeLength;
     private DriveType driveType;
 

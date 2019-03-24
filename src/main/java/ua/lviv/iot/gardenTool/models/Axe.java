@@ -1,5 +1,8 @@
-package ua.lviv.iot.models;
+package ua.lviv.iot.gardenTool.models;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Axe extends GardenTool {
     private double bladeWidth;
 

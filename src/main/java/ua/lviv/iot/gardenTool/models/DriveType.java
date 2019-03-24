@@ -1,4 +1,4 @@
-package ua.lviv.iot.models;
+package ua.lviv.iot.gardenTool.models;
 
 public enum DriveType {
 

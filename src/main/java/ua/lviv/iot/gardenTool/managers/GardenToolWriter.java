@@ -1,6 +1,6 @@
-package ua.lviv.iot.managers;
+package ua.lviv.iot.gardenTool.managers;
 
-import ua.lviv.iot.models.GardenTool;
+import ua.lviv.iot.gardenTool.models.GardenTool;
 
 import java.io.File;
 import java.io.OutputStreamWriter;
