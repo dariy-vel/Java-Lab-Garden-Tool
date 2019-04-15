@@ -77,7 +77,7 @@ public class GardenToolApplicationTests {
     }
 
     @Test
-    public void writeToDBTest() {
+    public void axeSearchTest() {
         LinkedList<Axe> foundAxeList = axeRepository.findByPurpose(Purpose.GROUND);
         Axe foundAxe = foundAxeList.get(0);
         assertEquals(this.axe.getPurpose(), foundAxe.getPurpose());
